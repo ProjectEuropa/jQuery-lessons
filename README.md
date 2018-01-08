@@ -1,39 +1,36 @@
-## jQuery program 3 TODOリスト改良しよう
 
-- TODOアプリを改良しよう
-- ヒント
+## jQuery Ajax
 
+## Ajaxとは
+ブラウザ上でページを読み込み直すことなくサーバーと通信し、表示内容を動的に変える技術。
 
-## TODOアプリを改良しよう
-- TODOアプリのTODOリストに完了ボタンと削除ボタンをつけてみよう
-- 完了ボタンをクリックすると訂正線がつくように、削除ボタンをクリックするとTODOが削除するようにしてみよう
-- ドラッグアンドドロップでTODOリストを並び替えてみよう
-
-## ヒント
 ```js
-$("li").on("click", function(){
-    var index = $("li").index(this); // ES2015以降は変数宣言はvarよりletやconstを使うことが多いです
-    alert(index);
-   // indexメソッドでセレクタの何番目にアクセスしたかが分かります。
-});
+// 書き方の例
+$.ajax({
+    url:"hoge.php", // 指定するURL
+    type:"get", // httpメソッド
+    data:{
+        "hoge":$("#hoge").val() // 送信するパラメータ
+        }
+    })
+    .done(function(data){
+        console.log(data); // Ajaxが成功した時の処理 一般的にはサーバー側でJSONデータを送信して、JavaScript側でJSONを受け取る
+    })
+    .fail(function(){
+        console.log("通信失敗"); // Ajaxが失敗した時の処理
+    });
 
-var liText = $("li").eq(0).text();
-alert(liText);
-//eqメソッドでセレクタのN番目の要素を指定できます。(最初は１からではなく0から始まります)
+    // こういうシンプルな書き方もある
+    $.ajax({
+        url: "data/hoge.txt" // 指定するURL(textデータも読み込み可能)
+    })
+    .then(
+        function (data) {
+            console.log(data); // Ajaxが成功した時の処理
+        },
+        function () {
+            alert("失敗") // Ajaxが失敗した時の処理
+        });
+
+    // オプション・その他のAjax通信方法などは様々な書き方があるので各々調べてください
 ```
-
-## ヒント2
-```js
-//clickメソッドではなく
-$(document).on("click" , セレクタ , function() { 
-});
-// 又は
-$(セレクタ).on("click" , function() {
-});
-//を使ってみよう。
-
-//clickメソッドはJavaScript読み込み完了後に動的に追加された要素には、イベントが発火しないためです。
-```
-
-## ヒント3
-ドラッグアンドドロップについてはjQuery ui で調べてみよう
