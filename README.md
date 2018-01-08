@@ -11,7 +11,7 @@
 
 ## ヒント
 ```js
-$("li").on("click", function(){
+$(document).on("click", "li", function(){
     var index = $("li").index(this); // ES2015以降は変数宣言はvarよりletやconstを使うことが多いです
     alert(index);
    // indexメソッドでセレクタの何番目にアクセスしたかが分かります。
