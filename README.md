@@ -28,7 +28,7 @@ alert(liText);
 $(document).on("click" , セレクタ , function() { 
 });
 // 又は
-$(セレクタ).on("click" , function() {) {
+$(セレクタ).on("click" , function() {
 });
 //を使ってみよう。
 
