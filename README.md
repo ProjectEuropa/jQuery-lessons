@@ -1,59 +1,39 @@
-## jQuery program  TODOリストを作ろう
+## jQuery program 3 TODOリスト改良しよう
 
-- テキストボックスの値の取得
-- テキストボックスから取得した値を
-- htmlに書き込んでみよう
-- appendメソッドについて
-- Todoリストを作ってみよう
+- TODOアプリを改良しよう
+- ヒント
 
 
-## テキストボックスの値の取得
-```html
-<body>
-<input type="text" id=“text-box“ value=“text”>
+## TODOアプリを改良しよう
+- TODOアプリのTODOリストに完了ボタンと削除ボタンをつけてみよう
+- 完了ボタンをクリックすると訂正線がつくように、削除ボタンをクリックするとTODOが削除するようにしてみよう
+- ドラッグアンドドロップでTODOリストを並び替えてみよう
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-</body>
-
-<script>
-var text = $("#text-box").val();
-alert(text);
-// $(セレクタ).val()でテキストボックスの値を取得することができます
-</script>
-
-```
-
-
-## テキストボックスから取得した値をhtmlに書き込んでみよう
-
-```html
-<body>
-<input type="text" id=“text-box“ value=“text”>
-<div></div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-</body>
-<script>
-var text = $(“#text-box“).val();
-$("div").append("<div>" + text + "</div>");
-</script>
-```
-
-
-## appendメソッドについて
+## ヒント
 ```js
-$(セレクタ). append(引数(htmlコード)); 
-// appendは指定したセレクタの後に引数のhtmlコードが追加されます。
+$("li").on("click", function(){
+    var index = $("li").index(this);
+    alert(index);
+   // indexメソッドでセレクタの何番目にアクセスしたかが分かります。
+});
+
+var liText = $("li").eq(0).text();
+alert(liText);
+//eqメソッドでセレクタのN番目の要素を指定できます。(最初は１からではなく0から始まります)
 ```
 
-## 課題 TODOリストを作ってみよう
+## ヒント2
+```js
+//clickメソッドではなく
+$(document).on("click" , セレクタ , function() { 
+});
+// 又は
+$(セレクタ).on("click" , function() {) {
+});
+//を使ってみよう。
 
-```html
-実際のコード
-<input type="text" id="todo">
-    <button>write</button>
-    <ul>
-    </ul>
-
-<!-- 上記のコードに対してボタンをクリックしたときに、ulタグにテキストボックスで入力した値がliタグで追加されるようなコードを記述してください。
- -->
+//clickメソッドはJavaScript読み込み完了後に動的に追加された要素には、イベントが発火しないためです。
 ```
+
+## ヒント3
+ドラッグアンドドロップについてはjQuery ui で調べてみよう
