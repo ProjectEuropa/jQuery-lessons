@@ -8,7 +8,7 @@ $.fn.hoge = function () {
 };
 
 // 使い方
-$(selector).hoge();
+$(セレクタ).hoge();
 
 // 具体例
 $.fn.green = function() {
