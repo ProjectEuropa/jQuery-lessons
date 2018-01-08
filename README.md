@@ -105,8 +105,8 @@ $(".sample").click(function(){
 ## 課題2
 ```html
 <body>
-    <div class=“yellow”>I am Yellow!</div>
-    <div class=“green”>I am Green!</div> 
+    <div class="yellow">I am Yellow!</div>
+    <div class="green">I am Green!</div> 
  </body>
 <!-- 上記のコードに対して、class=“yellow”要素をマウスホバー時に黄色に、 class=“green”要素をマウスホバー時に緑色になるようにコードを記述してください。
  -->
@@ -115,8 +115,8 @@ $(".sample").click(function(){
 ## 課題3 
 ```html
 <body>
-    <div id=“not-fade-out”>Not fade out me!</div>
-    <div id=“fade-out”>Fade out me!</div>
+    <div id="not-fade-out">Not fade out me!</div>
+    <div id="fade-out">Fade out me!</div>
     
     <button>fade out</button>
 </body>
