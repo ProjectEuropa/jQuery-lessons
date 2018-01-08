@@ -10,7 +10,7 @@
 ## テキストボックスの値の取得
 ```html
 <body>
-<input type="text" id=“text-box“ value=“text”>
+<input type="text" id="text-box" value="text">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </body>
@@ -28,12 +28,12 @@ alert(text);
 
 ```html
 <body>
-<input type="text" id=“text-box“ value=“text”>
+<input type="text" id="text-box" value="text">
 <div></div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </body>
 <script>
-var text = $(“#text-box“).val();
+var text = $("#text-box").val();
 $("div").append("<div>" + text + "</div>");
 </script>
 ```
