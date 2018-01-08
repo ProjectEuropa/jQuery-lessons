@@ -27,7 +27,7 @@
 
 <script>
 $("p").click(function(){
-        $(this).hide();
+    $(this).hide();
 });
 </script>
 
@@ -46,7 +46,7 @@ $("p").click(function(){
 ```js
 // jsファイル
 $("p").click(function(){
-        $(this).hide();
+    $(this).hide();
 });
 ```
 
