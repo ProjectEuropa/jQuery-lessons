@@ -1,4 +1,4 @@
-## jQueryプラグインの作り方
+## jQuery lesson 5 プラグインの作り方
 
 ```js
 //作り方
