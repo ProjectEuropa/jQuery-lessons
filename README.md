@@ -1,5 +1,5 @@
 
-## jQuery Ajax
+## jQuery lesson 4 Ajax
 
 ## Ajaxとは
 ブラウザ上でページを読み込み直すことなくサーバーと通信し、表示内容を動的に変える技術。
