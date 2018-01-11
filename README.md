@@ -1,4 +1,4 @@
-## jQuery program  TODOリストを作ろう
+## jQuery lesson 2  TODOリストを作ろう
 
 - テキストボックスの値の取得
 - テキストボックスから取得した値を
