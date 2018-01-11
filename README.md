@@ -1,4 +1,4 @@
-## ハンバーガーメニューを自作する
+## jQuery lesson 6 ハンバーガーメニューを自作する
 
 ```js
 $(セレクタ).toggleClass("hoge");
