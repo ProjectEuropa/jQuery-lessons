@@ -14,3 +14,8 @@ drawer.htmlに対して
 <i class="fa fa-bars" aria-hidden="true" id="drawer"></i>
 ```
 アイコンをクリックした際に、ナビゲーションメニューが開くようににしてください。ナビゲーションメニューが開いている時にアイコンをクリックするとナビゲーションメニューが閉じるようにしてください。またナビゲーションメニューが開いている時と閉じている時にアイコンを切り替えるようにしてください。
+
+## 参考
+jQueryリファレンス
+http://www.jquerystudy.info/reference/effects/slideToggle.html　
+http://www.jquerystudy.info/reference/attributes/toggleClass.html
