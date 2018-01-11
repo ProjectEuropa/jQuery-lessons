@@ -1,4 +1,4 @@
-## jQuery program 3 TODOリスト改良しよう
+## jQuery lesson 3 TODOリスト改良しよう
 
 - TODOアプリを改良しよう
 - ヒント
