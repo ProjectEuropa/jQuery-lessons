@@ -1,4 +1,4 @@
-# jQuery program 1 - jQueryの基本
+# jQuery lesson 1 - jQueryの基本
 
 - jQueryとは
 - 基本的な使い方
