@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.5.0.css">
+    <title>Qunit test</title>
+    <style>
+        ul li button {
+            margin: 0 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>todoリスト</h1>
+    <input type="text" id="todo">
+    <button id="write">write</button>
+
+    <ul id="sortable-li">
+    </ul>
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://code.jquery.com/qunit/qunit-2.5.0.js"></script>
+</body>
+
+</html>
+
+<script>
+    $("#write").on('click', function () {
+        var todo = $("#todo").val();
+        $("ul").append("<li>" + todo +
+            "<button class='complete'>完了</button><button class='delete'>削除</button></li>");
+        $("#todo").val("");
+    });
+</script>
+<script>
+    const getUlHtml = () => {
+        return $("ul").html().trim();
+    };
+    const event = $.Event('click');
+    QUnit.test('Writeクリックイベントテスト', function(assert) {
+        $('#todo').val('テスト');
+        $('#write').trigger(event);
+        assert.equal(getUlHtml(),'<li>テスト<button class="complete">完了</button><button class="delete">削除</button></li>', '成功');
+    });
+
+</script>
+
+</body>
+
+</html>
