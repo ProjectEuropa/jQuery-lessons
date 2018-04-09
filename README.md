@@ -4,7 +4,7 @@
 $(セレクタ).toggleClass("hoge");
 // セレクタにclass="hoge"がなければclass="hoge"を追加、ある場合はclass="hoge"を削除する
 
-$(セレクタ).slideToggle()
+$(セレクタ).slideToggle();
 //セレクタ表示されている時は隠し、隠れている時は表示する
 ```
 
